@@ -21,27 +21,32 @@ body {
 .child-container {
     border: 0;
     margin: 0;
-    width: 12.5vw;
-    height: 50vh;
-    flex: 1 0 auto;
+    height: 1vh;
+    flex: 1 0 1%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
+.child-container:hover {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+
 .pixelated {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAZElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg1kAAAU+AAeFBrFwAAAAASUVORK5CYII=');
+    background-color: #333;
+    /*background-image: url('pixel-fire.webp');*/
     background-size: 10px 10px;
-    animation: pixel-trail 0.2s linear;
+    animation: pixel-trail linear;
+}
+
+@keyframes pixel-trail {
+  0% {
+    opacity: 1;
   }
-  
-  @keyframes pixel-trail {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+  100% {
+    opacity: 0;
   }
-  
+}
 

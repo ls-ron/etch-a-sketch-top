@@ -8,19 +8,6 @@
 </head>
 <body>
     <div id="container"></div>
-    <script>
-        const container = document.getElementById('container');
-    
-        const fragment = document.createDocumentFragment();
-    
-        for (let i = 0; i < 16; i++) {
-          const newDiv = document.createElement('div');
-          newDiv.textContent = `Div Number ${i+1}`;
-          newDiv.classList.add('child-container');
-          fragment.appendChild(newDiv);
-        }
-    
-        container.appendChild(fragment);
-      </script>
+    <script src="main.js"></script>
 </body>
 </html>
