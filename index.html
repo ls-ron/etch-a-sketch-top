@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-a-Sketch!</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        const container = document.getElementById('container');
+    
+        const fragment = document.createDocumentFragment();
+    
+        for (let i = 0; i < 16; i++) {
+          const newDiv = document.createElement('div');
+          newDiv.textContent = `Div Number ${i+1}`;
+          newDiv.classList.add('child-container');
+          fragment.appendChild(newDiv);
+        }
+    
+        container.appendChild(fragment);
+      </script>
+</body>
+</html>
