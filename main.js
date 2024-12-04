@@ -19,10 +19,42 @@ function handleMouseEnter(event) {
 function handleMouseLeave(event) {
     setTimeout(() => {
     event.target.classList.remove('pixelated');
-    }, 200);
+    }, 75);
 }
 
 childContainer.forEach(item => {
     item.addEventListener('mouseenter', handleMouseEnter);
     item.addEventListener('mouseleave', handleMouseLeave);
 });
+
+let isDrawing = false;
+
+function handleMouseDown(event) {
+    isDrawing = true;
+    event.target.classList.add('drawing');
+}
+
+function handleMouseMove(event) {
+    if (isDrawing) {
+        event.target.classList.add('drawing')
+    }
+}
+
+function handleMouseUp(event) {
+    isDrawing = false;
+    event.target.classList.remove('drawing')
+}
+
+childContainer.forEach(item => {
+    item.addEventListener('mousedown', handleMouseDown);
+    item.addEventListener('mouseup', handleMouseUp);
+    item.addEventListener('mousemove', handleMouseMove);
+});
+
+function clearDrawing(event) {
+    if (event.key === " ") {
+        window.location.reload()
+    }
+}
+
+window.addEventListener('keydown', clearDrawing);
