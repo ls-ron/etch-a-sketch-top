@@ -10,5 +10,5 @@ I created:
 - stop drawing functionality by stop pressing left click
 - clear drawing/canvas funtionality by pressing spacebar
 
-press `spacebar` to refresh the page and start a new drawing
+press `spacebar` or `ctrl + r` to refresh the page and start a new drawing <br>
 press and hold `left click` to draw along the divs/pixels
